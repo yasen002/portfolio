@@ -1,0 +1,64 @@
+// Desktops & Laptops
+@include mediaLg {
+  //body
+  body {
+    font-size: 16px;
+  }
+
+  //about page:
+  .about-info {
+    grid-template-areas:
+      "bio-img bio bio"
+      "job1 job2 job3";
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu {
+    &-branding,
+    &-nav {
+      width: 50%;
+      float: left;
+    }
+  }
+
+  .menu .menu-branding {
+    height: 100vh;
+    transform: translate3d(0, -100%, 0);
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+    .portrait {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .menu-nav {
+    height: 100vh;
+    transform: translate3d(0, 100%, 0);
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // ul.menu-nav,
+  // div.menu-branding {
+  //   &.show {
+  //     transform: translate3d(0, 0, 0);
+  //     float: left;
+  //     width: 50%;
+  //     height: 100vh;
+  //   }
+  // }
+
+  // ul.menu-nav {
+  //   transform: translate3d(0, 100%, 0);
+  // }
+  // .menu-branding {
+  //   .portrait.show {
+  //     width: 250px;
+  //     height: 250px;
+  //     background: url("../img/p.jpg");
+  //   }
+  // }
+}
