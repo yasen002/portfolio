@@ -1,0 +1,61 @@
+$primary-color: #444;
+$secondary: #eece1a;
+$show-home-image: true;
+$home-image: url("https://raw.githubusercontent.com/bradtraversy/modern_portfolio/master/dist/img/background.jpg");
+$background-opacity: 0.9;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
+@mixin background {
+  @if $show-home-image {
+    &#bg-img {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($primary-color, $background-opacity);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@mixin mediasm {
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediamd {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medialg {
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaxl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+//set text color
+@function set-text-color($color) {
+  @if (lightness($color) > 40) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
