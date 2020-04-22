@@ -125,7 +125,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 4rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -263,12 +263,13 @@ main {
   margin-top: 1rem; }
   .box-wrap div {
     letter-spacing: 0.3em;
+    word-wrap: break-word;
     position: relative;
     border: 3px solid #fff;
     border-radius: 5px;
     margin: 10px;
     padding: 10px;
-    width: 50%;
+    width: auto;
     transition: all 0.3s ease-in-out;
     cursor: pointer; }
     .box-wrap div:hover {
@@ -281,6 +282,16 @@ main {
         width: 10px;
         height: 10px; }
 
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 5rem; }
+  .box-wrap div {
+    width: 80%; } }
+
 @media screen and (min-width: 769px) {
   body {
     font-size: 16px; }
@@ -288,7 +299,7 @@ main {
     grid-template-areas: "bio-img bio bio" "job1 job2 job3";
     grid-template-columns: repeat(3, 1fr); }
   .menu-branding, .menu-nav {
-    width: 50%;
+    width: 60%;
     float: left; }
   .menu .menu-branding {
     height: 100vh;
@@ -302,4 +313,12 @@ main {
     height: 100vh;
     transform: translate3d(0, 100%, 0); }
     .menu-nav.show {
-      transform: translate3d(0, 0, 0); } }
+      transform: translate3d(0, 0, 0); }
+  .box-wrap div {
+    width: 50%; }
+  body {
+    font-size: 16px; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; } }

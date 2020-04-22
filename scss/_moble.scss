@@ -1,3 +1,26 @@
+//ipad
+@include mediaMd {
+  //font size
+  body {
+    font-size: 12px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      font-size: 5rem;
+    }
+  }
+
+  //contact info box for ipad
+  .box-wrap {
+    div {
+      width: 80%;
+    }
+  }
+}
+
 // Desktops & Laptops
 @include mediaLg {
   //body
@@ -16,7 +39,7 @@
   .menu {
     &-branding,
     &-nav {
-      width: 50%;
+      width: 60%;
       float: left;
     }
   }
@@ -41,24 +64,24 @@
     }
   }
 
-  // ul.menu-nav,
-  // div.menu-branding {
-  //   &.show {
-  //     transform: translate3d(0, 0, 0);
-  //     float: left;
-  //     width: 50%;
-  //     height: 100vh;
-  //   }
-  // }
+  //contact info box for PC
+  .box-wrap {
+    div {
+      width: 50%;
+    }
+  }
 
-  // ul.menu-nav {
-  //   transform: translate3d(0, 100%, 0);
-  // }
-  // .menu-branding {
-  //   .portrait.show {
-  //     width: 250px;
-  //     height: 250px;
-  //     background: url("../img/p.jpg");
-  //   }
-  // }
+  //overall font-size
+  body {
+    font-size: 16px;
+  }
+
+  //heading font size
+  h1,
+  h2,
+  h3 {
+    &.lg-heading {
+      font-size: 6rem;
+    }
+  }
 }
