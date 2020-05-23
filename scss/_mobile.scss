@@ -62,8 +62,8 @@
       "job3";
 
     grid-template-columns: 1fr;
-    img {
-      src: $avatar_big;
+    .bio-image {
+      margin: 0 auto;
     }
   }
 

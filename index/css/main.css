@@ -164,9 +164,9 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .about-info .bio-image {
     grid-area: bioimage;
-    margin: auto;
-    border-radius: 50%;
-    border: #eece1a 3px solid; }
+    width: 250px;
+    height: 250px;
+    background: url("https://imgur.com/V1Hzvqr.jpg") no-repeat; }
   .about-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }
@@ -311,8 +311,8 @@ main {
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
-    .about-info img {
-      src: url("https://imgur.com/V1Hzvqr.jpg"); }
+    .about-info .bio-image {
+      margin: 0 auto; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
