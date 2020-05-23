@@ -4,7 +4,7 @@
   "description": "Yasen's portfolio website",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o index/css/ recursive"
+    "sass": "node-sass -w scss/ -o index/css/ --recursive"
   },
   "author": "Yasen",
   "license": "ISC",
