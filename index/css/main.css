@@ -311,6 +311,8 @@ main {
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
+    .about-info img {
+      src: url("https://imgur.com/V1Hzvqr.jpg"); }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
