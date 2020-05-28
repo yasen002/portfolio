@@ -133,19 +133,19 @@ main {
       @include easeOut;
     }
   }
-  // item overlay
-  .item:hover {
-    .overlay {
-      z-index: 2;
-      height: 100%;
-    }
-  }
-
+  // item & overlay
   .item {
     position: relative;
     margin: 0 auto;
     height: 300px;
     width: 300px;
+    p {
+      //hide the paragraph before hover
+      opacity: 0;
+      -o-transition-delay: 0.3s;
+      -moz-transition-delay: 0.3s;
+      transition-delay: 0.3s;
+    }
     .overlay {
       position: absolute;
       top: 0;
@@ -188,24 +188,42 @@ main {
     }
   }
 
+  .item:hover {
+    .overlay {
+      z-index: 2;
+      height: 100%;
+    }
+    p {
+      opacity: 1;
+    }
+  }
+
+  // .item1 {
+  //   background: url("https://images.unsplash.com/photo-1523837084841-974e58314272?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80");
+  //   background-size: 100% 100%;
+  // }
+
   .item1 {
-    background: url("https://images.unsplash.com/photo-1523837084841-974e58314272?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80");
-    background-size: 100% 100%;
+    background: url("https://imgur.com/zg1BL65.jpg");
+    background-size: 450px 300px;
+    background-position: center;
   }
   .item2 {
-    background: url("https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?ixlib=rb-1.2.1&auto=format&fit=crop&w=942&q=80");
-    background-size: 100% 100%;
+    background: url("https://imgur.com/Dj4hs7Z.jpg");
+    background-size: 450px 300px;
+    background-position: center;
   }
   .item3 {
-    background: url("https://imgur.com/nr9fyy9.jpg");
+    background: url("https://imgur.com/vD6IB4A.jpg");
     background-size: 100% 100%;
   }
   .item4 {
-    background: url("https://imgur.com/nr9fyy9.jpg");
-    background-size: 100% 100%;
+    background: url("https://imgur.com/HPEJwXU.jpg");
+    background-size: 450px 300px;
+    background-position: center;
   }
   .item5 {
-    background: url("https://imgur.com/9A6B6Yj.jpg");
+    background: url("https://imgur.com/wRKXvfT.jpg");
     background-size: 100% 100%;
   }
 }
