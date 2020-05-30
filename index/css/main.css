@@ -197,7 +197,8 @@ main {
     position: relative;
     margin: 0 auto;
     height: 300px;
-    width: 300px; }
+    width: 300px;
+    border-radius: 20px; }
     .projects .item p {
       opacity: 0;
       -o-transition-delay: 0.3s;
@@ -210,9 +211,11 @@ main {
       left: 0;
       right: 0;
       height: 0;
+      opacity: 0;
       width: 100%;
       z-index: -1;
       background-color: #008cba;
+      border-radius: 20px;
       transition: all 0.5s ease-out;
       padding: 0.6rem; }
       .projects .item .overlay .project-description {
@@ -237,27 +240,31 @@ main {
           flex-grow: 1; }
   .projects .item:hover .overlay {
     z-index: 2;
-    height: 100%; }
+    height: 100%;
+    opacity: 1; }
   .projects .item:hover p {
     opacity: 1; }
   .projects .item1 {
-    background: url("https://imgur.com/zg1BL65.jpg");
-    background-size: 450px 300px;
+    background: linear-gradient(45deg, #d88af5bd, #be3ceecb), url("/img/1.jpg");
+    background-size: cover;
     background-position: center; }
   .projects .item2 {
-    background: url("https://imgur.com/Dj4hs7Z.jpg");
+    background: linear-gradient(45deg, rgba(227, 251, 166, 0.7), rgba(126, 171, 8, 0.7)), url("/img/2.jpg");
     background-size: 450px 300px;
     background-position: center; }
   .projects .item3 {
-    background: url("https://imgur.com/vD6IB4A.jpg");
+    background: linear-gradient(45deg, rgba(255, 188, 170, 0.7), rgba(44, 97, 253, 0.7)), url("/img/3.jpg");
     background-size: 100% 100%; }
   .projects .item4 {
-    background: url("https://imgur.com/HPEJwXU.jpg");
+    background: linear-gradient(45deg, rgba(243, 172, 157, 0.7), rgba(228, 71, 36, 0.7)), url("/img/4.jpg");
     background-size: 450px 300px;
     background-position: center; }
   .projects .item5 {
-    background: url("https://imgur.com/wRKXvfT.jpg");
+    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url("/img/5.jpg");
     background-size: 100% 100%; }
+  .projects .item6 {
+    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url("/img/6.jpg");
+    background-size: cover; }
 
 .boxes {
   display: flex;
