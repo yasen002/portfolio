@@ -260,10 +260,10 @@ main {
     background-size: 450px 300px;
     background-position: center; }
   .projects .item5 {
-    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url("/img/5.jpg");
+    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url(/img/5.jpg);
     background-size: 100% 100%; }
   .projects .item6 {
-    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url("/img/6.jpg");
+    background: linear-gradient(45deg, rgba(194, 255, 131, 0.7), rgba(199, 156, 31, 0.7)), url(/img/6.jpg);
     background-size: cover; }
 
 .boxes {

@@ -231,12 +231,12 @@ main {
   }
   .item5 {
     background: linear-gradient(45deg, rgba(#c2ff83, 0.7), rgba(#c79c1f, 0.7)),
-      url("/img/5.jpg");
+      url(/img/5.jpg);
     background-size: 100% 100%;
   }
   .item6 {
     background: linear-gradient(45deg, rgba(#c2ff83, 0.7), rgba(#c79c1f, 0.7)),
-      url("/img/6.jpg");
+      url(/img/6.jpg);
     background-size: cover;
   }
 }
