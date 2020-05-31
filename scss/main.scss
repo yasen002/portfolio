@@ -208,36 +208,35 @@ main {
   // }
 
   .item1 {
-    background: linear-gradient(45deg, #d88af5bd, #be3ceecb),
-      url("../../img/1.jpg");
+    background: linear-gradient(45deg, #d88af5bd, #be3ceecb), url("/img/1.jpg");
     background-size: cover;
     background-position: center;
   }
   .item2 {
     background: linear-gradient(45deg, rgba(#e3fba6c9, 0.7), rgba(#7eab08, 0.7)),
-      url("../../img/2.jpg");
+      url("/img/2.jpg");
     background-size: 450px 300px;
     background-position: center;
   }
   .item3 {
     background: linear-gradient(45deg, rgba(#ffbcaa, 0.7), rgba(#2c61fd, 0.7)),
-      url("../../img/3.jpg");
+      url("/img/3.jpg");
     background-size: 100% 100%;
   }
   .item4 {
     background: linear-gradient(45deg, rgba(#f3ac9d, 0.7), rgba(#e44724, 0.7)),
-      url("../../img/4.jpg");
+      url("/img/4.jpg");
     background-size: 450px 300px;
     background-position: center;
   }
   .item5 {
     background: linear-gradient(45deg, rgba(#c2ff83, 0.7), rgba(#c79c1f, 0.7)),
-      url("../../img/5.jpg");
+      url("/img/5.jpg");
     background-size: 100% 100%;
   }
   .item6 {
     background: linear-gradient(45deg, rgba(#c2ff83, 0.7), rgba(#c79c1f, 0.7)),
-      url("../../img/6.jpg");
+      url("/img/6.jpg");
     background-size: cover;
   }
 }
