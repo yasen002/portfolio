@@ -39,3 +39,22 @@ function copyToClipboard(text) {
   document.execCommand("copy");
   document.body.removeChild(el);
 }
+
+var $html = $("body");
+
+/***************************************************************************************
+ *    Work Cited
+ *    Author: Stefen from Codepen
+ *    Date: 2020
+ *    source: https://codepen.io/stefen
+ *
+ ***************************************************************************************/
+// dark mode switch
+$("#toggle-switch").on("change", function() {
+  if (this.checked) {
+    $html.addClass("dark-mode");
+  } else {
+    $html.removeClass("dark-mode");
+  }
+});
+//***************************************************************************************

@@ -91,13 +91,14 @@
   transition-delay: 0.4s; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 body {
   background: #444;
   color: #fff;
   height: 100%;
-  margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
@@ -346,6 +347,106 @@ main {
         content: "copied!";
         width: 100px;
         height: 10px; }
+
+.contactFormWrap {
+  text-align: center;
+  font-size: 2rem; }
+  .contactFormWrap .contactForm {
+    display: inline-block; }
+    .contactFormWrap .contactForm__email, .contactFormWrap .contactForm__name {
+      display: inline-block; }
+      .contactFormWrap .contactForm__email input, .contactFormWrap .contactForm__name input {
+        width: 16rem;
+        background: transparent;
+        border-style: none;
+        border-bottom: 1px solid rgba(185, 185, 185, 0.5);
+        font-size: 3rem; }
+        .contactFormWrap .contactForm__email input::placeholder, .contactFormWrap .contactForm__name input::placeholder {
+          color: #97820b; }
+    .contactFormWrap .contactForm__message {
+      margin-top: 1rem; }
+      .contactFormWrap .contactForm__message > * {
+        font-size: 3rem;
+        text-align: left;
+        display: block;
+        border-radius: 5px; }
+      .contactFormWrap .contactForm__message label {
+        color: #97820b; }
+      .contactFormWrap .contactForm__message textarea {
+        background: #777777;
+        resize: none; }
+    .contactFormWrap .contactForm input:focus {
+      outline: none; }
+      .contactFormWrap .contactForm input:focus::-webkit-input-placeholder {
+        color: #eece1a; }
+    .contactFormWrap .contactForm textarea:focus {
+      outline: none; }
+    .contactFormWrap .contactForm .contactForm__submit {
+      margin-top: 2rem;
+      display: inline-block;
+      width: 40%;
+      border-radius: 40px;
+      background: #eece1a; }
+      .contactFormWrap .contactForm .contactForm__submit:hover {
+        background: #debf10;
+        box-shadow: 0 5px 50px 1px #eece1a; }
+
+/***************************************************************************************
+*    Work Cited
+*    Author: Stefen from Codepen
+*    Date: 2020
+*    source: https://codepen.io/stefen
+*
+***************************************************************************************/
+body.dark-mode {
+  background: #7edf79; }
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 140px; }
+  .toggle span {
+    margin: 0 0.5rem; }
+  .toggle input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden; }
+    .toggle input[type="checkbox"]:checked + label {
+      background: teal; }
+    .toggle input[type="checkbox"]:checked + label:after {
+      left: calc(100% - 2px);
+      transform: translateX(-100%); }
+  .toggle label {
+    cursor: pointer;
+    width: 75px;
+    height: 34px;
+    background: rgba(0, 0, 0, 0.27);
+    display: block;
+    border-radius: 40px;
+    position: relative; }
+    .toggle label:after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 30px;
+      height: 30px;
+      background: #fff;
+      border-radius: 40px;
+      transition: 0.3s; }
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; }
 
 @media screen and (min-width: 1171px) {
   .projects {

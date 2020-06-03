@@ -8,6 +8,9 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <!-- jquery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="css/main.css" />
     <title>contact Me</title>
   </head>
@@ -42,38 +45,81 @@
           </li>
           <li class="nav-item current">
             <a href="contact.html" class="nav-link">
-              How To Reach Me
+              Contact Me
             </a>
           </li>
         </ul>
       </nav>
     </header>
-
+    <div class="toggle">
+      <span>🌙</span>
+      <input type="checkbox" id="toggle-switch" />
+      <label for="toggle-switch"
+        ><span class="screen-reader-text">Toggle Color Scheme</span></label
+      >
+      <span>☀️</span>
+    </div>
     <main id="contact">
       <h1 class="lg-heading">
         Contact
         <span class="text-secondary">Me</span>
       </h1>
       <h2 class="sm-heading">
-        This is how you can reach me ...
+        Thanks for taking the time to reach out. How can I help you today?
       </h2>
-      <div class="box-wrap">
-        <div class="boxes" onclick="copyToClipboard('362yasen2@gamil.com')">
+      <div class="contactFormWrap">
+        <form
+          class="contactForm"
+          name="contact"
+          method="POST"
+          netlify-honeypot="bot-field"
+          data-netlify="true"
+        >
+          <div>
+            <div class="contactForm__name">
+              <input type="text" name="name" placeholder="Name" />
+            </div>
+            <div class="contactForm__email">
+              <input type="email" name="email" placeholder="Email" />
+            </div>
+          </div>
+          <div class="contactForm__message">
+            <label for="message" class="messageLabel">Message</label>
+            <textarea rows="8" cols="24" name="message" id="message"></textarea>
+          </div>
+
+          <div data-netlify-recaptcha="true"></div>
+          <!-- <p class="contactForm__submit">
+            <button class="btn-submit " type="submit">Send</button>
+          </p>-->
+          <div class="contactForm__submit">
+            <a
+              href="https://www.yasen362.xyz/index.html"
+              type="submit"
+              class="btn-submit"
+              ><span>Send</span></a
+            >
+          </div>
+        </form>
+      </div>
+      <!-------------I commented this out, because i don't feel confortable sharing my personal information with anyone visiting my site. but i kept the CSS and JS code intact, just incase. -->
+      <!-- <div class="box-wrap">
+        <div class="boxes" onclick="copyToClipboard('**********@gamil.com')">
           <i class="fa fa-envelope-o" aria-hidden="true"></i>
           <span class="text-secondary">Email: </span>
-          <span class="copy">362yasen2@gmail.com</span>
+          <span class="copy">*********@gmail.com</span>
         </div>
-        <div class="boxes" onclick="copyToClipboard('424-310-7253')">
+        <div class="boxes" onclick="copyToClipboard('424-310-****')">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <span class="text-secondary">Phone: </span>
-          <span class="copy">424-310-7253</span>
+          <span class="copy">424-310-****</span>
         </div>
         <div class="boxes" onclick="copyToClipboard('California')">
           <i class="fa fa-map-marker" aria-hidden="true"></i>
           <span class="text-secondary">Address: </span>
           <span class="copy">California</span>
         </div>
-      </div>
+      </div> -->
     </main>
 
     <footer id="main-footer">
@@ -81,5 +127,18 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+      $(function() {
+        // $("#message").focus(function(){
+        //   $('label[for="message"]').css("color", "red");
+        // });
+        $("#message").focusout(function() {
+          $('label[for="message"]').css("color", "#97820b");
+        });
+        $("#message").focusin(function() {
+          $('label[for="message"]').css("color", "#eece1a");
+        });
+      });
+    </script>
   </body>
 </html>
